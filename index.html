@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>blog</title>
+		<script>
+			(function browserRedirect() {
+		        var sUserAgent= navigator.userAgent.toLowerCase();
+		        var bIsIpad= sUserAgent.match(/ipad/i) == "ipad";
+		        var bIsIphoneOs= sUserAgent.match(/iphone os/i) == "iphone os";
+		        var bIsMidp= sUserAgent.match(/midp/i) == "midp";
+		        var bIsUc7= sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+		        var bIsUc= sUserAgent.match(/ucweb/i) == "ucweb";
+		        var bIsAndroid= sUserAgent.match(/android/i) == "android";
+		        var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce";
+		        var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile";
+		
+		        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+		            window.location.href= 'about:blank';
+		            alert("请用电脑访问");
+		        } 
+		    })()//调用自身，页面一打开就开始跳转
+		</script>
+		<link rel="shortcut icon" href="imgs/favicon.ico">
+		<link rel="stylesheet" href="css/blog.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<div class="headTop">
+			<p class="flfloat">
+				<span id="sayHello"></span>
+				<span id="localtime"></span>
+			</p>
+			<p class="rgfloat">您好，欢迎来到
+				<a href="#">彭瑞</a>
+				的个人博客!</p>
+		</div>	
+		<header class="header">
+			<nav>
+				<ul>
+					<li><a href="#">枫叶霜雪</a></li>
+					<li class="navSearch">
+						<input type="text" placeholder="搜索……"/>
+						<a></a>
+					</li>
+					<li><a href="#">留言</a></li>
+					<li><a href="#">技术分享</a></li>
+					<li><a href="#">心情随笔</a></li>
+					<li class="navActive"><a href="#">首页</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="content">
+			<article class="article flfloat">
+				<div class="banner">
+					<ul class="img">
+						<li><a href="imgs/banner1.jpg"><img src="imgs/banner1.jpg"></a></li>
+						<li><a href="imgs/banner2.jpg"><img src="imgs/banner2.jpg"></a></li>
+						<li><a href="imgs/banner3.jpg"><img src="imgs/banner3.jpg"></a></li>
+						<li><a href="imgs/banner4.jpg"><img src="imgs/banner4.jpg"></a></li>
+						<li><a href="imgs/banner5.jpg"><img src="imgs/banner5.jpg"></a></li>
+					</ul>
+					<div class="btn btn-left">&lt;</div>
+					<div class="btn btn-right">&gt;</div>
+				</div>
+				<section class="section">
+					<h3>最新文章</h3>
+					<div class="essayBox">
+						<div class="essayImg flfloat">
+							<a href="https://baike.baidu.com/item/青椒炒鸡蛋">
+								<img src="imgs/vegetable1.jpg">
+								<span></span>
+							</a>
+						</div>
+						<div class="essayMessage rgfloat">
+							<h3>
+								<a href="https://baike.baidu.com/item/青椒炒鸡蛋">青椒炒鸡蛋</a>
+							</h3>
+							<p>
+								<a href="https://baike.baidu.com/item/青椒炒鸡蛋">
+									青椒炒鸡蛋是一款家常菜品，主要食材是鸡蛋和青椒，
+									辅料猪油，盐，香醋，大葱等，主要烹饪工艺是炒，
+									黄绿搭配，色彩美观，口味鲜香，营养丰富。在炒鸡蛋时最好不要放味精，
+									这是最起码的常识。因为鸡蛋富含大量的谷氨酸和一部分氯化钠，
+									当鸡蛋被加热后，鸡蛋中的这两种物质会合成新的物质，
+									这种物质化学名称叫谷氨酸钠，味精的主要成分就是……
+								</a>
+							</p>
+							<div class="itemIcon">
+								<span>2018-10-01</span>
+								<span>20次浏览</span>
+								<span>
+									<a href="#">
+										2条评论
+									</a>
+								</span>
+								<a href="https://baike.baidu.com/item/青椒炒鸡蛋">
+									<b>阅读全文</b>
+									<span></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<div class="essayBox">
+						<div class="essayImg flfloat">
+							<a href="https://baike.baidu.com/item/香菇炖鸡汤">
+								<img src="imgs/vegetable2.jpg">
+								<span></span>
+							</a>
+						</div>
+						<div class="essayMessage rgfloat">
+							<h3>
+								<a href="https://baike.baidu.com/item/香菇炖鸡汤">香菇炖鸡汤</a>
+							</h3>
+							<p>
+								<a href="https://baike.baidu.com/item/香菇炖鸡汤">
+									香菇炖鸡汤是一道做法简单，味道鲜美的滋补靓汤，
+									制作原料有整鸡、香菇、红枣等。可以补气血、养颜、提高免疫力。口味鲜美。
+									做这个汤用干的或鲜的香菇都行，营养价值是一样的。
+									如果不喜欢吃香菇，可以换成自己喜欢的蘑菇，与鸡汤味道都会很搭，
+									蘑菇里含有女人的“驻颜王牌”硒，可以促进皮肤新陈代谢和抗衰老…… 
+								</a>
+							</p>
+							<div class="itemIcon">
+								<span>2018-9-10</span>
+								<span>120次浏览</span>
+								<span>
+									<a href="#">
+										5条评论
+									</a>
+								</span>
+								<a href="https://baike.baidu.com/item/香菇炖鸡汤">
+									<b>阅读全文</b>
+									<span></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<div class="essayBox">
+						<div class="essayImg flfloat">
+							<a href="https://baike.baidu.com/item/红烧牛肉">
+								<img src="imgs/vegetable3.jpg">
+								<span></span>
+							</a>
+						</div>
+						<div class="essayMessage rgfloat">
+							<h3>
+								<a href="https://baike.baidu.com/item/红烧牛肉">红烧牛肉</a>
+							</h3>
+							<p>
+								<a href="https://baike.baidu.com/item/香菇炖鸡汤">
+									红烧牛肉是一道传统菜品，口味有香辣、五香等，
+									主要材料是牛肉，配之其他辅料。京菜、川菜、湘菜里都有此菜品，
+									深受大众喜爱。牛肉是全世界人都爱吃的食品，
+									中国人消费的肉类食品之一，仅次于猪肉，牛肉蛋白质含量高，
+									而脂肪含量低，所以味道鲜美，受人喜爱，享有“肉中骄子”的美称。
+									肉含有丰富的蛋白质，氨基酸组成比猪肉更接近人体需要……
+								</a>
+							</p>
+							<div class="itemIcon">
+								<span>2018-8-20</span>
+								<span>210次浏览</span>
+								<span>
+									<a href="#">
+										15条评论
+									</a>
+								</span>
+								<a href="https://baike.baidu.com/item/红烧牛肉">
+									<b>阅读全文</b>
+									<span></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<div class="webSever">
+						<a href="#" title="查看更多">Web前端服务</a>
+						<a href="#">&gt;</a>
+					</div>
+					<ul class="webImg">
+						<li>
+							<a href="#">
+								<img src="imgs/PSHTML.png">
+							</a>
+							<h3>
+								<a href="#">PS&HTML</a>	
+							</h3>
+							<p>
+								PSD/JPG/AI转HTML 高质量的DIVCSS前端切图……
+							</p>
+							<div class="detailBtn">
+								<span>2018-9-10</span>
+								<a href="#">查看详情</a>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<img src="imgs/PCMobile.png">
+							</a>
+							<h3>
+								<a href="#">PC&Mobile Phone</a>	
+							</h3>
+							<p>
+								移动端/微网站前端切图 移动端HTML5 CSS3前端开发……
+							</p>
+							<div class="detailBtn">
+								<span>2018-8-1</span>
+								<a href="#">查看详情</a>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<img src="imgs/code.png">
+							</a>
+							<h3>
+								<a href="#">JS&JQuery</a>	
+							</h3>
+							<p>
+								JS/JQuery效果定制 提供基于JS，jQ的动画效果制作……
+							</p>
+							<div class="detailBtn">
+								<span>2018-4-15</span>
+								<a href="#">查看详情</a>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<div class="poem flfloat ">
+					<h3>
+						<span>
+							<img src="imgs/catalog .png"/>
+						</span>
+						<a href="http://www.shicimingju.com/shicimark/tangshisanbaishou.html">
+							唐诗三百首
+						</a>
+						<a href="http://www.shicimingju.com/shicimark/tangshisanbaishou.html">&gt;</a>
+					</h3>
+					<div class="poem-post">
+						<h3>
+							<a href="https://baike.baidu.com/item/唐诗">
+								唐诗简介
+							</a>
+						</h3>
+						<div class="poemImgBox">
+							<div class="flfloat">
+								<a href="https://baike.baidu.com/item/唐诗">
+									<img src="imgs/tangPoem.png" alt="唐诗集" />
+								</a>
+							</div>
+							<p class="rgfloat">
+								<a href="https://baike.baidu.com/item/唐诗">
+									唐诗，泛指创作于唐朝诗人所作的诗。
+									唐诗是中华民族珍贵的文化遗产之一，
+									是中华文化宝库中的一颗明珠，
+									同时也对世界上许多民族和国家的文化发展产生了很大影响……
+								</a>	
+							</p>
+						</div>
+						<ul class="poem-grid">
+							<li>
+								<span class="flfloat">
+									&gt;
+								</span>
+								<a href="www.shicimingju.com/chaxun/list/2973.html" class="flfloat">
+									出塞
+								</a>
+								<span class="rgfloat">
+									2018-09-01
+								</span>
+							</li>
+							<li>
+								<span class="flfloat">
+									&gt;
+								</span>
+								<a href="http://www.shicimingju.com/chaxun/list/3035.html" class="flfloat">
+									寻隐者不遇
+								</a>
+								<span class="rgfloat">
+									2018-08-10
+								</span>
+							</li>
+							<li>
+								<span class="flfloat">
+									&gt;
+								</span>
+								<a href="http://www.shicimingju.com/chaxun/list/3055.html" class="flfloat">
+									九月九日忆山东兄弟
+								</a>
+								<span class="rgfloat">
+									2018-07-20
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="poem rgfloat ">
+					<h3>
+						<span>
+							<img src="imgs/catalog .png"/>
+						</span>
+						<a href="http://www.shicimingju.com/shicimark/songcisanbaishou.html">
+							宋词三百首
+						</a>
+						<a href="http://www.shicimingju.com/shicimark/songcisanbaishou.html">&gt;</a>
+					</h3>
+					<div class="poem-post">
+						<h3>
+							<a href="https://baike.baidu.com/item/宋词">
+								宋词简介
+							</a>
+						</h3>
+						<div class="poemImgBox">
+							<div class="flfloat">
+								<a href="https://baike.baidu.com/item/宋词">
+									<img src="imgs/songPoem.png" alt="宋词集" />
+								</a>
+							</div>
+							<p class="rgfloat">
+								<a href="https://baike.baidu.com/item/宋词">
+									宋代盛行的一种中国文学体裁，
+									宋词是一种相对于古体诗的新体诗歌之一，
+									标志宋代文学的最高成就。宋词句子有长有短，
+									便于歌唱。因是合乐的歌词，故又称……
+								</a>
+							</p>
+						</div>
+						<ul class="poem-grid">
+							<li>
+								<span class="flfloat">
+									&gt;
+								</span>
+								<a href="http://www.shicimingju.com/chaxun/list/3733.html" class="flfloat">
+									雨霖铃
+								</a>
+								<span class="rgfloat">
+									2018-08-20
+								</span>
+							</li>
+							<li>
+								<span class="flfloat">
+									&gt;
+								</span>
+								<a href="http://www.shicimingju.com/chaxun/list/33810.html" class="flfloat">
+									少年游
+								</a>
+								<span class="rgfloat">
+									2018-07-15
+								</span>
+							</li>
+							<li>
+								<span class="flfloat">
+									&gt;
+								</span>
+								<a href="http://www.shicimingju.com/chaxun/list/3086.html" class="flfloat">
+									天净沙  秋思
+								</a>
+								<span class="rgfloat">
+									2018-06-25
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<aside class="aside rgfloat">
+				<div class="myMessage">
+					<div class="author">
+						<a href="imgs/logo.png" class="flfloat">
+							<img src="imgs/logo.png"/>
+						</a>
+						<div class="rgfloat">
+							<a href="#">
+								博主:
+							</a>
+							<a href="#">
+								彭瑞
+							</a>
+							<a href="#">
+								<p>
+									个人资料：男，九零后
+	                   			</p>
+	                   			<p>
+	                   				爱好：精读、散步、捣鼓……
+	                   			</p>
+	                   			<p>
+	                   				签名：回首向来萧瑟处，也无风雨也无晴！
+	                   			</p>
+							</a>
+						</div>
+						
+					</div>
+					<ul class="messageLogo">
+						<li>
+							<a href="https://weibo.com/"></a>
+							<span></span>
+						</li>
+						<li>
+							<a href="https://wx.qq.com/"></a>
+							<span></span>
+						</li>
+						<li>
+							<a href="https://web2.qq.com/"></a>
+							<span></span>
+						</li>
+					</ul>
+					<div class="tjs">
+						<h3>天净沙 秋思</h3>
+						<p>枯藤老树昏鸦，小桥流水人家，<br>古道西风瘦马。夕阳西下，断肠人在天涯。 </p>
+					</div>
+					<div class="runningTime">
+						北京时间：<span></span>
+					</div>
+				</div>
+				<div class="tsSc tsHeight">
+					<h3>
+						<a href="http://www.shicimingju.com/shicimark/tangshisanbaishou.html">
+							唐诗节选
+						</a>
+					</h3>
+					<ul>
+						<h3>春江花月夜</h3>
+						<li>春江潮水连海平，海上明月共潮生。</li>
+						<li>滟滟随波千万里，何处春江无月明!</li>
+						<li>
+							<a href="http://www.shicimingju.com/chaxun/list/31835.html">
+								查看详情
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<h3>乌衣巷</h3>
+						<li>朱雀桥边野草花，乌衣巷口夕阳斜。</li>
+						<li>旧时王谢堂前燕，飞入寻常百姓家。</li>
+					</ul>
+					<ul>
+						<h3>江雪</h3>
+						<li>千山鸟飞绝，万径人踪灭。</li>
+						<li>孤舟蓑笠翁，独钓寒江雪。 </li>
+					</ul>
+					<ul>
+						<h3>滁州西涧</h3>
+						<li>独怜幽草涧边生，上有黄鹂深树鸣。</li>
+						<li>春潮带雨晚来急，野渡无人舟自横。  </li>
+					</ul>
+					<ul>
+						<h3>枫桥夜泊</h3>
+						<li>月落乌啼霜满天，江枫渔火对愁眠。</li>
+						<li>姑苏城外寒山寺，夜半钟声到客船。 </li>
+					</ul>
+					<ul>
+						<h3>李凭箜篌引</h3>
+						<li>吴丝蜀桐张高秋，空山凝云颓不流。</li>
+						<li>江娥啼竹素女愁，李凭中国弹箜篌。</li>
+						<li>
+							<a href="http://www.shicimingju.com/chaxun/list/3074827.html">
+								查看详情
+							</a>
+						</li>
+					</ul>
+					<div class="comeFrom">
+						<a href="http://www.shicimingju.com/shicimark/tangshisanbaishou.html">节选自《唐诗三百首》</a>
+					</div>
+				</div>
+				<div class="tsSc scHeight">
+					<h3>
+						<a href="http://www.shicimingju.com/shicimark/songcisanbaishou.html">
+							宋词节选
+						</a>
+					</h3>
+					<ul>
+						<h3>雨霖铃</h3>
+						<li>寒蝉凄切，对长亭晚，骤雨初歇。</li>
+						<li>都门帐饮无绪，留恋处，兰舟催发。</li>
+						<li>执手相看泪眼，竟无语凝噎。</li>
+						<li>念去去，千里烟波，暮霭沉沉楚天阔。</li>
+						<li>多情自古伤离别，更那堪冷落清秋节！</li>
+						<li>今宵酒醒何处？杨柳岸，晓风残月。</li>
+						<li>此去经年，应是良辰好景虚设。</li>
+						<li>便纵有千种风情，更与何人说？</li>
+					</ul>
+					<ul>
+						<h3>相见欢（乌夜啼）</h3>
+						<li>林花谢了春红，太匆匆，</li>
+						<li>无奈朝来寒雨晚来风。</li>
+						<li>胭脂泪，相留醉，几时重，</li>
+						<li>自是人生长恨水长东。 </li>
+					</ul>
+					<ul>
+						<h3>浪淘沙</h3>
+						<li>帘外雨潺潺，春意阑珊。</li>
+						<li>罗衾不耐五更寒。</li>
+						<li>梦里不知身是客，一晌贪欢。</li>
+						<li>独自莫凭栏，无限江山，</li>
+						<li>别时容易见时难。</li>
+						<li>流水落花春去也，天上人间。</li>
+					</ul>
+					<ul>
+						<li>李煜诗词全集……</li>
+						<li>
+							<a href="http://www.shicimingju.com/chaxun/list/31835.html">
+								查看详情
+							</a>
+						</li>
+					</ul>
+					<div class="comeFrom">
+						<a href="http://www.shicimingju.com/shicimark/songcisanbaishou_3_0__0.html">
+							节选自《宋词三百首》
+						</a>
+					</div>
+				</div>
+				
+			</aside>
+			<div class="fluidBox">
+				<div class="fuildLink">
+					<h3 class="flfloat">
+						<a href="https://www.qdfuns.com/">链接</a>
+					</h3>
+					<div class="fluidBtn rgfloat">
+						<span class="btn fuild-left">&lt;</span>
+						<span class="btn fuild-right">&gt;</span>
+					</div>
+				</div>	
+				<div class="fluid">
+					<ul class="fluid-img">
+						<li>
+							<a href="imgs/fluid-test1.png"><img src="imgs/fluid-test1.png"></a>
+							<h3>
+								<a href="#">鱼翔浅底</a>
+							</h3>
+						</li>
+						<li>
+							<a href="imgs/fluid-test2.png"><img src="imgs/fluid-test2.png"></a>
+							<h3>
+								<a href="#">瀑布</a>
+							</h3>
+						</li>
+						<li>
+							<a href="imgs/fluid-test3.png"><img src="imgs/fluid-test3.png"></a>
+							<h3>
+								<a href="#">欢乐安康</a>
+							</h3>
+						</li>
+						<li>
+							<a href="imgs/fluid-test4.png"><img src="imgs/fluid-test4.png"></a>
+							<h3>
+								<a href="#">大剧院</a>
+							</h3>
+						</li>
+						<li>
+							<a href="imgs/fluid-test5.png"><img src="imgs/fluid-test5.png"></a>
+							<h3>
+								<a href="#">大明湖畔</a>
+							</h3>
+						</li>
+						<li>
+							<a href="imgs/fluid-test6.png"><img src="imgs/fluid-test6.png"></a>
+							<h3>
+								<a href="#">唐人影视城</a>
+							</h3>
+						</li>
+					</ul>
+				</div>
+				</ul>
+			</div>
+		</div>
+		<footer class="footer">
+			 <div class="hg">
+	           <ul>
+	               <li>
+	                   <a href="#">
+	                   		<img src="imgs/foot1.png">
+	                   </a>
+	                   <a href="#">
+	                   		W3C标准规范
+	                   </a>
+	               </li>
+	                <li>
+	                   <a href="#">
+	                   		<img src="imgs/foot2.png">
+	                   </a>
+	                   <a href="#">
+	                   		兼容各主流浏览器
+	                   </a>
+	               </li>
+	                <li>
+	                   <a href="#">
+	                   		<img src="imgs/foot3.png">
+	                   </a>
+	                   <a href="#">
+	                   		代码简洁，便于后台开发与拓展
+	                   </a>
+	               </li>
+	                <li>
+	                   <a href="#">
+	                   		<img src="imgs/foot4.png">
+	                   </a>
+	                   <a href="#">
+	                   		超高效率与服务
+	                   </a>
+	               </li>
+	           </ul>
+	           	<h3>前端中国-专注web前端开发</h3>
+	            <p>CopyRight © 2016-2018 版权所有. 粤ICP备14017586号-7</p>
+        	</div>
+		</footer>
+	</body>
+</html>
