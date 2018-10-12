@@ -1,0 +1,763 @@
+/*resetcss*/
+*{
+	margin: 0;
+	padding: 0;
+}
+em,i{
+	font-style: normal;
+}
+li{
+	list-style: none;
+}
+img,input{
+	outline: none;
+	border:0;
+	vertical-align: middle;
+}
+button{
+	cursor: pointer;
+}
+a{
+	color:#666;
+	text-decoration: none;
+}
+a:hover{
+	color:#c81623;
+}
+.flfloat{
+	float: left;
+}
+.rgfloat{
+	float: right;
+}
+body{
+	background-color: #ddd;
+}
+/*头部css*/
+.headTop{
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+}
+.headTop p.rgfloat>a{
+	font-weight: bold;
+}
+.headTop,.header nav,.content,.footer .hg{
+	width:1200px;
+	margin: 0 auto;
+}
+.header{
+	background:#fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+.header nav ul{
+	overflow: hidden;
+}
+.header nav li{
+	float: right;
+	width:85px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	margin: 0 2px;
+}
+.header nav li:hover{
+	cursor: pointer;
+}
+.header nav li:first-child{
+	float: left;
+	width:auto;
+	position: relative;
+	overflow:hidden;
+}
+/*激光扫描效果*/
+.header nav li:first-child:before{
+	content:"";
+    position: absolute;
+    left: -665px;
+    top: -460px;
+    width: 200px;
+    height: 15px;
+    background-color: rgba(255,255,255,0.5);
+	transform: rotate(-45deg);
+	animation: bgline  ease-in 1.2s infinite;
+}
+.header nav li:first-child>a{
+	font-size: 32px;
+	font-weight: bold;
+    color:#539569;
+}
+@keyframes bgline{
+	from{ left: -100px; top: 0; }
+    to{ left: 110px; top: 100px; }
+}
+.header nav li:first-child>a:hover{
+	color: red;
+}
+
+.header nav li.navSearch{
+	width:auto;
+	position: relative;
+	cursor:default;
+}
+.navSearch input{
+	border: 1px solid #000;
+	width:100px;
+	height: 40px;
+	border-radius:20px;
+	text-indent: 10px;
+	transition: width 1s;
+	box-shadow:0 1px 2px rgba(0,0,0,0.6);
+}
+.navSearch input:hover{
+	width:150px;
+}
+.navSearch a{
+	width: 20px;
+	height: 20px;
+	border: none;
+	background:url(../imgs/searchLogo.png) no-repeat center center;
+	position: absolute;
+	top:28px;
+	right: 15px;
+}
+.navActive{
+	background-color: deepskyblue;
+}
+.navActive a{
+	color: white;
+	font-weight: bold;
+}
+/*中间css*/
+.content{
+	overflow: hidden;
+}
+.content .article{
+	width:850px;
+	overflow: hidden;
+}
+/*article下轮播图*/
+.article .banner{
+	width: 850px;
+	height: 350px;
+	position: relative;
+	overflow: hidden;
+	margin:20px 0;
+	box-shadow:0 1px 2px rgba(0,0,0,0.2);
+}
+.article .banner .img{
+	width:5100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.banner .img li{
+	float: left;
+}
+.article .banner .btn{
+	width: 35px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background: rgba(0,0,0,0.3);
+	color: #fff;
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	display: none;
+}
+.article .banner:hover .btn{
+	display: block;
+}
+.article .banner .btn:hover{
+	background: orangered;
+}
+.article .banner .btn-left{
+	left: 0;
+}
+.article .banner .btn-right{
+	right: 0;
+}
+
+/*vegetables*/
+.section{
+	background-color: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+	margin-bottom: 10px;
+}
+.section>h3{
+	color:#2F889A;
+	font-size: 18px;
+    line-height: 45px;
+   	padding-left: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+.section .essayBox{
+	border-left: solid 4px #fff;
+	overflow: hidden;
+}
+.section .essayBox:hover{
+	background-color: #F8FCFE;
+	border-left-color: #2F889A;
+}
+.essayImg{
+	margin:15px 13px 2px 10px;;;
+}
+.essayImg a{
+	width:220px;
+	height:145px;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.essayImg a span{
+	position: absolute;
+	top:0;
+	left:-360px;
+	width:320px;
+	height:145px;
+	background-image:linear-gradient(0deg,rgba(255,255,255,0),
+	rgba(255,255,255,0.7),
+	rgba(255,255,255,0));
+	transform: skewx(-25deg);
+}
+.essayImg a:hover span{
+	animation: bgSpan linear 0.5s;
+}
+@keyframes bgSpan{
+	from{left:-300px}
+	to{ left:300px}
+}
+
+.essayBox img{
+	transition: all 1s;
+}
+.essayBox:hover img{
+	transform: scale(1.08);
+}
+.essayMessage{
+	width:560px;
+	margin-right:35px;
+}
+.essayMessage h3{
+	line-height: 45px;
+	border-bottom:1px solid #eee;
+}
+.essayMessage h3 a{
+	transition:margin-left 1s ;
+}
+.essayMessage h3 a:hover{
+	color:#2F889A;
+	margin-left: 20px;
+}
+.essayMessage p{
+	height:118px;
+	overflow: hidden;
+	line-height: 24px;
+}
+.essayMessage .itemIcon{
+	margin: 6px 0 15px;
+	overflow: hidden;
+}
+.essayMessage .itemIcon>span{
+	font-size: 12px;
+	color:#aaa;
+	padding-left: 16px;
+	margin-right: 15px;
+}
+.essayMessage .itemIcon>span:first-child{
+	background:url(../imgs/calendarIcon.png) 0 2px no-repeat;
+}
+.essayMessage .itemIcon>span:nth-child(2){
+	background:url(../imgs/scanIcon.png) 0 2px no-repeat;
+}
+.essayMessage .itemIcon>span:last-of-type{
+	background:url(../imgs/commentIcon.png) 0 2px no-repeat;
+}
+.essayMessage .itemIcon>a{
+	float: right;
+	background-color: skyblue;
+	width:80px;
+	height: 26px;
+	line-height: 26px;
+	border-radius: 4px;
+	position: relative;
+	overflow: hidden;
+}
+.essayMessage .itemIcon>a>b{
+	position: absolute;
+	top:0;
+	width:80px;
+	text-align: center;
+	font-size: 14px;
+	z-index: 5;
+	color:#fff;
+}
+.essayMessage .itemIcon>a>span{
+	width:80px;
+	height: 26px;
+	position: absolute;
+	left:0;
+	top:-26px;
+	background-color:deepskyblue;
+	transition: top ease-out 0.5s;
+}
+.essayMessage .itemIcon>a:hover span{
+	top:0;
+}
+/*web server:三栏*/
+.section .webSever{
+	overflow: hidden;
+	padding:0 10px;
+	border-bottom: 1px solid #eaeaea;
+}
+.section .webSever a{
+	font-size: 18px;
+	line-height:45px;
+	font-weight: bold;
+}
+.section .webSever a:last-child{
+	float: right;
+}
+.section .webImg{
+	padding: 0 10px;
+	overflow: hidden;
+}
+.section .webImg li{
+	float: left;
+	padding: 0 28px;
+	margin: 10px 0;
+	border-right:1px solid #eaeaea;
+}
+.section .webImg li:last-of-type{
+	border-right:none;
+}
+.section .webImg li>a{
+	display:block;
+	width:220px;
+	height:220px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow:0 1px 2px rgba(0,0,0,0.3);
+	margin-bottom: 15px;
+}
+.section .webImg li>a img{
+	transition: all 0.8s;
+}
+.section .webImg li:hover>a img{
+	transform: scale(1.1);
+}
+.webImg li>h3{
+	border-top: 1px solid #eaeaea;
+	text-align: center;
+}
+.webImg li>h3{
+	transition: margin-left 1s;
+	padding:5px 0;
+}
+.webImg li>h3:hover{
+	margin-left: 25px;
+}
+.webImg li>p{
+	width:220px;
+	height:32px;
+	font-size: 14px;
+	color:#aaa;
+}
+.webImg li .detailBtn{
+	margin-top:12px;
+	overflow: hidden;
+	font-size: 14px;
+}
+.webImg li .detailBtn>span{
+	color:red;
+	font-weight: bold;
+}
+.webImg li .detailBtn>a{
+	float:right;
+	width:80px;
+	height: 24px;
+	text-align: center;
+	line-height: 24px;
+	background-color:#ccc;
+	border-radius: 3px;
+}
+.webImg li .detailBtn>a:hover{
+	background-color: red;
+	color:#fff;
+}
+/*诗词:两栏*/
+.article .poem{
+	width:420px;
+	background-color: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+	margin-bottom: 10px;
+}
+.article .poem>h3{
+	overflow: hidden;
+	line-height: 40px;
+	background: #efefef;
+	border-bottom: 1px solid #ccc;
+}
+.article .poem>h3>span{
+	float: left;
+	width:40px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+.article .poem>h3>a:first-of-type{
+	margin-left: 15px;
+}
+.article .poem>h3>a:last-of-type{
+	float: right;
+	margin-right: 15px;
+}
+.article .poem .poem-post{
+	padding: 10px 15px;
+}
+.article .poem .poem-post>h3{
+	margin-bottom: 8px;
+}
+.article .poem .poem-post>h3 a{
+	transition: margin-left 1s;
+}
+.article .poem .poem-post>h3 a:hover{
+	margin-left: 25px;
+}
+.poem-post .poemImgBox{
+	overflow: hidden;
+}
+.poem-post .poemImgBox div.flfloat{
+	width:180px;
+	overflow: hidden;
+}
+.poem-post .poemImgBox div.flfloat a img{
+	transition: all 0.8s; 
+}
+.poem-post .poemImgBox div.flfloat a:hover img{
+	transform: scale(1.1);
+}
+.poem-post .poemImgBox p.rgfloat{
+	font-size: 14px;
+	width:195px;
+	height: 110px;
+	line-height: 19px;
+	overflow: hidden;
+}
+.poem-post .poem-grid{
+	margin-top: 10px;
+}
+.poem-post .poem-grid>li{
+	overflow: hidden;
+	line-height:24px;
+}
+.poem-post .poem-grid>li a{
+	margin-left: 5px;
+	transition: all 0.8s;
+}
+.poem-post .poem-grid>li a:hover{
+	padding-left:15px;
+}
+.poem-post .poem-grid>li span:last-of-type{
+	color:#bbb;
+	font-size: 14px;
+}
+/*无缝轮播*/
+.content>.fluidBox{
+	clear: both;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+	background-color:#fff;
+	margin-bottom: 10px;
+}
+.content>.fluidBox>.fuildLink{
+	height: 35px;
+	line-height: 35px;
+	padding: 0 20px 0 10px;
+	border-bottom: 1px solid #eaeaea;
+	background-color: #EAEAEA;
+	overflow: hidden;
+}
+.content>.fluidBox .fluidBtn{
+	width:100px;
+	cursor: pointer;
+}
+.content>.fluidBox .fluidBtn .btn{
+	cursor: pointer;
+	font-size: 24px;
+	margin-left: 20px;
+}
+.content>.fluidBox .fluidBtn .btn:hover{
+	color:deepskyblue;
+	font-weight: bold;
+}
+.fluidBox .fluid {
+	width:1200px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+.fluidBox .fluid  .fluid-img{
+	position: absolute;
+	width:2880px;
+	overflow: hidden;	
+}
+.fluidBox .fluid .fluid-img li{
+	float: left;
+	padding:10px;
+	height:180px;
+}
+.fluidBox .fluid .fluid-img li a{
+	display: block;
+	width: 220px;
+	height: 150px;
+	overflow: hidden;
+}
+.fluidBox .fluid .fluid-img  img{
+	transition: all 0.8s;
+}
+.fluidBox .fluid .fluid-img li:hover img{
+	transform: scale(1.2);
+}
+.fluidBox .fluid .fluid-img li h3{
+	text-align: center;
+	margin-top: 5px;
+}
+/*侧边栏*/
+.aside{
+	width:340px;
+}
+.aside .myMessage{
+	background-color: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+	margin: 20px 0;
+	height: 350px;
+	padding:0 15px;
+}
+.aside .myMessage .author {
+	overflow: hidden;
+	padding: 10px 0;
+}
+.aside .myMessage .author>a:first-child{
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+}
+.aside .myMessage .author>a:first-child img{
+	transition: all 1s;
+}
+.aside .myMessage .author>a:first-child:hover img{
+	transform: rotate(360deg) scale(1.2);
+}
+.aside .myMessage .author>div.rgfloat{
+	width:160px;
+	height: 140px;
+	overflow: hidden;
+	text-align: center;
+}
+.author>div.rgfloat a:first-child{
+	color: white;
+	display: inline-block;
+	width:50px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	background:deepskyblue;
+	border-radius: 5px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	transition:all 0.8s;
+	margin-right: 10px;
+}
+.author>div.rgfloat a:first-child:hover{
+	background-color:deeppink ;
+}
+.author>div.rgfloat a:nth-child(2){
+	font-weight: bold;
+}
+.author>div.rgfloat a:nth-child(2):hover{
+	color: deepskyblue;
+}
+.author>div.rgfloat a:last-child{
+	display: block;
+	padding: 5px;
+	font-size: 14px;
+	text-align: left;
+	line-height: 22px;
+}
+.messageLogo{
+	margin:20px 5px;
+}
+/*清除浮动*/
+.messageLogo:after{
+	content:"";
+	display: block;
+	clear: both;
+}
+.messageLogo li{
+	float: left;
+	margin: 0 25px;
+	position: relative;
+}
+.messageLogo li a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	transition: all 0.5s;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+.messageLogo li:first-child>a{
+	background: url(../imgs/wbLogo1.png) no-repeat;
+}
+.messageLogo li:nth-child(2)>a{
+	background: url(../imgs/wxLogo1.png) no-repeat;
+}
+.messageLogo li:last-child>a{
+	background: url(../imgs/qqLogo1.png) no-repeat;
+}
+.messageLogo li:first-child:hover>a{
+	background: url(../imgs/wbLogo2.png) no-repeat;
+}
+.messageLogo li:nth-child(2):hover>a{
+	background: url(../imgs/wxLogo2.png) no-repeat;
+}
+.messageLogo li:last-child:hover>a{
+	background: url(../imgs/qqLogo2.png) no-repeat;
+}
+.messageLogo li>span{
+	position: absolute;
+	top:-110px;
+	left:-25px;
+	z-index: 99;
+	display: none;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);	
+}
+.messageLogo li:first-child>span{
+	background: url(../imgs/wbCode.png) no-repeat;
+}
+.messageLogo li:nth-child(2)>span{
+	background: url(../imgs/wxCode.png) no-repeat;
+}
+.messageLogo li:last-child>span{
+	background: url(../imgs/qqCode.png) no-repeat;
+}
+.messageLogo li>span:after{
+	content: "";
+	width:0;
+	height:0;
+	border-top: 8px solid  #bbb;
+    border-left: 8px solid transparent ;
+    border-right: 8px solid transparent ;
+	position: absolute;
+	top:100px;
+	left:42px;
+}
+.messageLogo li:hover span{
+	display: block;
+}
+.myMessage .tjs{
+	text-align: center;
+}
+.myMessage .runningTime{
+	text-align: center;
+	line-height:32px;
+}
+.myMessage .runningTime span{
+	font-weight: bold;
+	color: red;
+}
+.tsHeight{
+	height: 698px;
+}
+.tsSc{
+	background: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	margin-bottom: 10px;	
+}
+.tsSc>h3{
+	text-align: center;
+	background-color: #EAEAEA;
+	line-height: 32px;
+	border-bottom: 1px solid #ddd;
+}
+.tsSc>h3>a{
+	color: deepskyblue;
+}
+.tsSc>h3>a:hover{
+	color: red;
+}
+.tsSc>ul{
+	text-align: center;
+	border-bottom: 1px solid #EAEAEA;
+	padding: 5px 0;
+	
+}
+.tsSc>ul>h3{
+	line-height:30px;
+}
+.tsSc>ul>li{
+	line-height: 24px;
+}
+.tsSc>ul>li a{
+	display: inline-block;
+	margin: 5px 0;
+	padding: 5px;
+	color: #fff;
+	background: #87CEEB;
+	border-radius: 5px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	transition:all 0.8s;
+}
+.tsSc>ul>li a:hover{
+	transform: rotate(360deg);
+	color: red;
+}
+.tsSc div.comeFrom{
+	text-align: center;
+	padding-top: 8px;
+}
+.scHeight{
+	height: 700px;
+}
+/*尾部*/
+.footer{
+    background:#000000;
+    text-align: center;
+    color:#fff;
+}
+.footer .hg ul{
+	overflow: hidden;
+}
+.footer .hg ul li{
+	float: left;
+	width:280px;
+	margin: 10px;
+}
+.footer .hg ul li a{
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	color:#fff;
+}
+.footer .hg ul li a:first-child{
+	transition: all 0.8s;
+}
+.footer .hg ul li a:first-child:hover{
+	transform: translateY(-5px);
+}
+.footer .hg ul li a:last-child:hover{
+	color:deepskyblue;
+	margin-left: 20px;
+}
+.footer .hg ul li a:last-child{
+	transition: margin-left 0.8s;
+}
+.footer .hg>p{
+	padding: 10px 0;
+}
