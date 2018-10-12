@@ -16,8 +16,13 @@
 		        var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile";
 		
 		        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-		            window.location.href= 'https://www.baidu.com/';
-		            alert("请用电脑访问");
+		        	alert("请用电脑访问");
+		             window.onload=function(){
+		            	var header=document.getElementsByClassName("header")[0];
+		            	var footer=document.getElementsByClassName("footer")[0];
+		            	header.style.width="1200px";
+		            	footer.style.width="1200px";
+		            }
 		        } 
 		    })()//调用自身，页面一打开就开始跳转
 		</script>
